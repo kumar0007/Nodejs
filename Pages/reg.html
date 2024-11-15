@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: auto;
+        }
+        label, input {
+            margin-bottom: 10px;
+        }
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registerForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <span id="usernameError" class="error"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError" class="error"></span>
+
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" name="contact" required>
+        <span id="contactError" class="error"></span>
+
+        <button type="submit">Register</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

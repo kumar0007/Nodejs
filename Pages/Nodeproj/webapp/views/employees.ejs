@@ -1,0 +1,26 @@
+<!-- views/employees.ejs -->
+<h2>Employee List</h2>
+ 
+<table border="1" cellpadding="10" cellspacing="0">
+    <style src="/public/style.css"></style>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Salary</th>
+<th>Designation</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<% employees.forEach(employee => { %>
+<tr>
+<td><%= employee.id %></td>
+<td><%= employee.name %></td>
+<td><%= employee.sal %></td>
+<td><%= employee.designation %></td>
+<td><img src="<%= employee.image %>" alt="<%= employee.name %>" width="100"></td>
+</tr>
+<% }); %>
+</tbody>
+</table>
